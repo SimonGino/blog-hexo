@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="Git Commit message 格式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/11/29/hello-world/index.html">
+<meta property="og:title" content="Git Commit规范">
+<meta property="og:url" content="http://example.com/2023/12/05/Git-Commit%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Git Commit message 格式">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-29T15:53:05.127Z">
-<meta property="article:modified_time" content="2023-11-29T15:53:05.127Z">
+<meta property="article:published_time" content="2023-12-05T13:53:25.000Z">
+<meta property="article:modified_time" content="2023-12-05T13:53:41.072Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>Git Commit规范 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Git Commit规范"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-29 23:53" pubdate>
-          2023年11月29日 晚上
+        <time datetime="2023-12-05 21:53" pubdate>
+          2023年12月5日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          3.8k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          4 分钟
+          32 分钟
         
       </span>
     
@@ -267,24 +267,90 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">Git Commit规范</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>Git Commit message 格式</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="设置用户"><a href="#设置用户" class="headerlink" title="设置用户"></a>设置用户</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config core.ignorecase <span class="hljs-literal">false</span><br>git config --global user.name <span class="hljs-string">&quot;张三&quot;</span><br>git config --global user.email san.zhang@gmail.com<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="Git-Commit规范"><a href="#Git-Commit规范" class="headerlink" title="Git Commit规范"></a>Git Commit规范</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; <span class="hljs-comment">#issue_number</span><br><br>&lt;description&gt;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>其中，type、scope、subject是必需的，description 可以省略。不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。</p>
+<h3 id="type必填表示提交类型，值有以下几种："><a href="#type必填表示提交类型，值有以下几种：" class="headerlink" title="type必填表示提交类型，值有以下几种："></a>type必填表示提交类型，值有以下几种：</h3><ul>
+<li>feat: (feature)增加新功能</li>
+<li>fix: 修补bug</li>
+<li>docs: 文档（documentation）， 只改动了文档相关的内容</li>
+<li>style: 不影响代码含义的改动，例如去掉空格、改变缩进、增删分号</li>
+<li>build: 构造工具的或者外部依赖的改动，例如webpack，npm</li>
+<li>refactor: 代码重构时使用</li>
+<li>revert：回滚到上一个版本,执行git revert打印的message</li>
+<li>test: 添加测试或者修改现有测试</li>
+<li>pref: 提高性能的改动</li>
+<li>chore: 不修改src或者test的其余修改，例如构建过程或辅助工具的变动</li>
+<li>merge：代码合并</li>
+<li>sync：同步主线或分支的Bug</li>
+<li>ci: 与CI（持续集成服务）有关的改动</li>
+</ul>
+<h3 id="scope-可选-取值说明"><a href="#scope-可选-取值说明" class="headerlink" title="scope(可选)取值说明"></a>scope(可选)取值说明</h3><p>scope用于说明 commit影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。例如：<br>node-pc&#x2F;common rrd-h5&#x2F;activity，而we-sdk不需指定模块名。如果一次commit修改多个模块，建议拆分成多次commit，以便更好追踪和维护。后加入项目的新成员应遵循已有的 scope 约定（通过 git log可以查看某个文件的提交历史），不要自己编造。使用首字母小写的驼峰命名。除具体的模块、组件名之外，可以使用 base 表示基础结构、框架相关的改动，用 misc 表示杂项改动，用 all 表示大范围重构。</p>
+<p>例如在Angular，可以是location，browser，compile，compile，rootScope， ngHref，ngClick，ngView等。如果你的修改影响了不止一个scope，你可以使用*代替。</p>
+<h3 id="subject-必须"><a href="#subject-必须" class="headerlink" title="subject(必须)"></a>subject(必须)</h3><p>subject是 commit 目的的简短描述，50 个字符左右的简要说明。</p>
+<h3 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h3><ul>
+<li><p>结尾不加句号或其他标点符号。</p>
+</li>
+<li><p>根据以上规范git commit message将是如下的格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs git">fix(DAO):用户查询缺少username属性 <br>feat(Controller):用户查询接口开发<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>以上就是我们梳理的git commit规范，那么我们这样规范git commit到底有哪些好处呢？</p>
+<ul>
+<li>便于程序员对提交历史进行追溯，了解发生了什么情况。</li>
+<li>一旦约束了commit message，意味着我们将慎重的进行每一次提交，不能再一股脑的把各种各样的改动都放在一个git commit里面，这样一来整个代码改动的历史也将更加清晰。</li>
+<li>格式化的commit message才可以用于自动化输出Change log。</li>
+</ul>
+<h3 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h3><p>首字母小写，通常是动宾结构，描述做了什么事情，动词用一般现在时，禁止出现 update code ， fix bug 等无实际意义的描述，好的例子： select connector by sorting free memory （不需要形如 update about how to select connector … 的啰嗦写法）, fix success tip can not show on IE8 （不需要形如 fix bug of … 的啰嗦写法）</p>
+<ul>
+<li>以动词开头，使用第一人称现在时，比如change，而不是changed或changes</li>
+<li>尽量使用简单句保证简洁性</li>
+<li>第一个字母小写</li>
+<li>结尾不加句号（.）</li>
+<li>通过翻译检测工具确认英文的正确性和可读性</li>
+</ul>
+<h3 id="body"><a href="#body" class="headerlink" title="body"></a>body</h3><p>body填写详细描述，主要描述改动之前的情况及修改动机，对于小的修改不作要求，但是重大需求、更新等必须添加body来作说明。</p>
+<h3 id="break-changes"><a href="#break-changes" class="headerlink" title="break changes"></a>break changes</h3><p>break changes指明是否产生了破坏性修改，涉及break changes的改动必须指明该项，类似版本升级、接口参数减少、接口删除、迁移等。</p>
+<h3 id="affect-issues"><a href="#affect-issues" class="headerlink" title="affect issues"></a>affect issues</h3><p>affect issues指明是否影响了某个问题。例如我们使用jira时，我们在commit message中可以填写其影响的JIRA_ID，若要开启该功能需要先打通jira与gitlab。</p>
+<h3 id="使用Commitizen工具"><a href="#使用Commitizen工具" class="headerlink" title="使用Commitizen工具"></a>使用Commitizen工具</h3><p>安装commitizen</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g commitizen<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后，使用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs sh">(base) [@dinghuangMacPro:<span class="hljs-built_in">test</span> (master)]<span class="hljs-variable">$git</span> add .<br>(base) [@dinghuangMacPro:<span class="hljs-built_in">test</span> (master)]<span class="hljs-variable">$git</span> cz<br><span class="hljs-comment">#会出现下面的，按照提示写入</span><br>(base) [@dinghuangMacPro:<span class="hljs-built_in">test</span> (master)]$ git cz<br>cz-cli@4.2.2, cz-conventional-changelog@3.3.0<br><br>? Select the <span class="hljs-built_in">type</span> of change that you<span class="hljs-string">&#x27;re committing: (Use arrow keys)</span><br><span class="hljs-string">❯ feat:     A new feature</span><br><span class="hljs-string">  fix:      A bug fix</span><br><span class="hljs-string">  docs:     Documentation only changes</span><br><span class="hljs-string">  style:    Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</span><br><span class="hljs-string">  refactor: A code change that neither fixes a bug nor adds a feature</span><br><span class="hljs-string">  perf:     A code change that improves performance</span><br><span class="hljs-string">  test:     Adding missing tests or correcting existing tests</span><br><span class="hljs-string">(Move up and down to reveal more choices)</span><br><span class="hljs-string"></span><br><span class="hljs-string">#选择类型后</span><br><span class="hljs-string">? Select the type of change that you&#x27;</span>re committing: feat:     A new feature<br>? What is the scope of this change (e.g. component or file name): (press enter to skip) add aa.txt<br>? Write a short, imperative tense description of the change (max 82 chars):<br> (4) 新增文件<br>? Provide a longer description of the change: (press enter to skip)<br> 长描述：这是我第一次的提交<br>? Are there any breaking changes? No<br>? Does this change affect any open issues? Yes<br>? Add issue references (e.g. <span class="hljs-string">&quot;fix #123&quot;</span>, <span class="hljs-string">&quot;re #123&quot;</span>.):<br> feat <span class="hljs-comment">#123</span><br><br><span class="hljs-comment">#查看生成的git commit信息</span><br>(base) [@dinghuangMacPro:<span class="hljs-built_in">test</span> (master)]$ git <span class="hljs-built_in">log</span><br>commit 00d63b2c54c502bb75725e5a461d6ce9499910bc (HEAD -&gt; master)<br>Author: 丁煌 &lt;dinghuang123@gmail.com&gt;<br>Date:   Wed Nov 25 13:39:13 2020 +0800<br><br>    feat(add aa.txt): 新增文件<br><br>    长描述：这是我第一次的提交<br><br>    feat <span class="hljs-comment">#123</span><br></code></pre></td></tr></table></figure>
+
+<p>自动生成Change log</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g conventional-changelog-cli<br>conventional-changelog -p angular -i CHANGELOG.md -s<br></code></pre></td></tr></table></figure>
+
+<p>这个插件是根据当前分支提交的所有commit信息来生成对应的changelog，一般是在开发完成后，封代码后去进行生成。如果自动生成的有问题，可以根据自己的需求进行修改。</p>
+<h2 id="分支规范"><a href="#分支规范" class="headerlink" title="分支规范"></a>分支规范</h2><p>例如：</p>
+<ul>
+<li>分支版本命名规则：分支类型 分支发布时间 分支功能。比如：feature_20200401_#issueNum<ul>
+<li>分支类型包括：feature、bugfix、refactor三种类型，即新功能开发、bug修复和代码重构</li>
+<li>时间使用年月日进行命名，不足2位补0</li>
+<li>分支功能命名使用snake case命名法，即下划线命名。</li>
+</ul>
+</li>
+<li>Tag包括3位版本，前缀使用v。比如v1.2.31。Tag命名规范：<ul>
+<li>新功能开发使用第2位版本号，bug修复使用第3位版本号</li>
+<li>核心基础库或者Node中间价可以在大版本发布请使用灰度版本号，在版本后面加上后缀，用中划线分隔。alpha或者belta后面加上次数，即第几次alpha(具体可以查看语义化版本)：<ul>
+<li>v2.0.0-alpha-1</li>
+<li>v2.0.0-belta-1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>文章来源：<a target="_blank" rel="noopener" href="https://dinghuang.github.io/2020/11/08/Git%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">Git提交规范 | 一只病猫 (dinghuang.github.io)</a></p>
 
                 
               </div>
@@ -302,8 +368,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/11/29/hello-world/</div>
+      <div>Git Commit规范</div>
+      <div>http://example.com/2023/12/05/Git-Commit规范/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +381,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月29日</div>
+          <div>2023年12月5日</div>
         </div>
       
       
@@ -347,15 +413,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%A0%B9%E6%8D%AE%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/" title="分页查询根据另一个表进行排序">
+                      <a href="/2023/12/05/MySQL-group-by%E9%97%AE%E9%A2%98/" title="MySQL group_by问题">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">分页查询根据另一个表进行排序</span>
+                        <span class="hidden-mobile">MySQL group_by问题</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/12/05/%E7%A7%BB%E5%8A%A8%E5%85%89%E7%8C%AB%E8%8E%B7%E5%8F%96%E8%B6%85%E7%BA%A7%E5%AF%86%E7%A0%81/" title="移动光猫获取超级密码">
+                        <span class="hidden-mobile">移动光猫获取超级密码</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

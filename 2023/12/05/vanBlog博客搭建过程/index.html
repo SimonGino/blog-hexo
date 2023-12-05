@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="简单介绍下本站博客搭建过程优点：简洁、快速用到了docker、nginx、certbot工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/11/29/hello-world/index.html">
+<meta property="og:title" content="vanBlog博客搭建过程">
+<meta property="og:url" content="http://example.com/2023/12/05/vanBlog%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="简单介绍下本站博客搭建过程优点：简洁、快速用到了docker、nginx、certbot工具">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-29T15:53:05.127Z">
-<meta property="article:modified_time" content="2023-11-29T15:53:05.127Z">
+<meta property="article:published_time" content="2023-12-05T13:43:46.000Z">
+<meta property="article:modified_time" content="2023-12-05T13:44:07.986Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>vanBlog博客搭建过程 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="vanBlog博客搭建过程"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-29 23:53" pubdate>
-          2023年11月29日 晚上
+        <time datetime="2023-12-05 21:43" pubdate>
+          2023年12月5日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          4 分钟
+          20 分钟
         
       </span>
     
@@ -267,24 +267,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">vanBlog博客搭建过程</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>简单介绍下本站博客搭建过程<br>优点：简洁、快速<br>用到了docker、nginx、certbot工具</p>
+<span id="more"></span>
+<h1 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.安装依赖"></a>1.安装依赖</h1><p>如果你没有安装 docker 和 docker-compose，可以通过以下命令一键安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">curl -sSL https://get.daocloud.io/docker | sh<br>systemctl <span class="hljs-built_in">enable</span> --now docker<br></code></pre></td></tr></table></figure>
+<h1 id="2-新建编排文件"><a href="#2-新建编排文件" class="headerlink" title="2.新建编排文件"></a>2.新建编排文件</h1><p>因为我待会会使用nginx反代，所以暴露的端口为8880，也可以设置80或者其他任意端口</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&quot;3&quot;</span><br><br><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">vanblog:</span><br>    <span class="hljs-comment"># 阿里云镜像源</span><br>    <span class="hljs-comment"># image: registry.cn-beijing.aliyuncs.com/mereith/van-blog:latest</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">mereith/van-blog:latest</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-attr">TZ:</span> <span class="hljs-string">&quot;Asia/Shanghai&quot;</span><br>      <span class="hljs-comment"># 邮箱地址，用于自动申请 https 证书</span><br>      <span class="hljs-attr">EMAIL:</span> <span class="hljs-string">&quot;test@gmail.com&quot;</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-comment"># 图床文件的存放地址，按需修改。</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/data/static:/app/static</span><br>      <span class="hljs-comment"># 日志文件</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/log:/var/log</span><br>      <span class="hljs-comment"># Caddy 配置存储</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/caddy/config:/root/.config/caddy</span><br>      <span class="hljs-comment"># Caddy 证书存储</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/caddy/data:/root/.local/share/caddy</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-comment"># 前面的是映射到宿主机的端口号，改端口的话改前面的。</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">8880</span><span class="hljs-string">:80</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">4443</span><span class="hljs-string">:443</span><br>  <span class="hljs-attr">mongo:</span><br>    <span class="hljs-comment"># 某些机器不支持 avx 会报错，所以默认用 v4 版本。有的话用最新的。</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">mongo:4.4.16</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-attr">TZ:</span> <span class="hljs-string">&quot;Asia/Shanghai&quot;</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/data/mongo:/data/db</span><br></code></pre></td></tr></table></figure>
+<p>如果不想在同一台机器上部署数据库</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&quot;3&quot;</span><br><br><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">vanblog:</span><br>    <span class="hljs-comment"># 阿里云镜像源</span><br>    <span class="hljs-comment"># image: registry.cn-beijing.aliyuncs.com/mereith/van-blog:latest</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">mereith/van-blog:latest</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-attr">TZ:</span> <span class="hljs-string">&quot;Asia/Shanghai&quot;</span><br>      <span class="hljs-comment"># 邮箱地址，用于自动申请 https 证书</span><br>      <span class="hljs-attr">EMAIL:</span> <span class="hljs-string">&quot;test@gmail.com&quot;</span><br>      <span class="hljs-attr">VAN_BLOG_DATABASE_URL:</span> <span class="hljs-string">&quot;mongodb://mongo:0947Vh5lxpU1@zeabur-gcp-asia-east1-1.clusters.zeabur.com:30444/vanBlog?authSource=admin&quot;</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-comment"># 图床文件的存放地址，按需修改。</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/data/static:/app/static</span><br>      <span class="hljs-comment"># 日志文件</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">$&#123;PWD&#125;/log:/var/log</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-comment"># 前面的是映射到宿主机的端口号，改端口的话改前面的。</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">8880</span><span class="hljs-string">:80</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">4443</span><span class="hljs-string">:443</span><br></code></pre></td></tr></table></figure>
+<p>启动项目</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker-compose up -d<br></code></pre></td></tr></table></figure>
+<h1 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h1><blockquote>
+<p>申请证书时需要保持80端口开放</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">apt install certbot -y<br></code></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh">certbot certonly \<br>--standalone \<br>--agree-tos \<br>--no-eff-email \<br>--email <span class="hljs-built_in">test</span>@gmail.com \<br>-d example.org<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h1><p>我的配置文件放在&#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs conf">server &#123;<br>  listen 80;<br>  # 改为你的网址<br>  server_name example.org;<br>  # 重定向为 https<br>  return 301 https://$host$request_uri;<br>&#125;<br><br>server &#123;<br>  listen 443 ssl http2;<br>  # 改为你的网址<br>  server_name example.org;<br>  # 证书的公私钥<br>  ssl_certificate /etc/letsencrypt/live/example.org/fullchain.pem;<br>  ssl_certificate_key /etc/letsencrypt/live/example.org/privkey.pem;<br><br>  location / &#123;<br>    # 改为容器的 PORT<br>    proxy_pass http://127.0.0.1:8880;<br>    proxy_set_header X-Real-IP $remote_addr;<br>    proxy_set_header X-Forwarded-Proto $scheme;<br>    proxy_set_header Upgrade $http_upgrade;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>重载配置</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">nginx -t<br>nginx -s reload<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -302,8 +310,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/11/29/hello-world/</div>
+      <div>vanBlog博客搭建过程</div>
+      <div>http://example.com/2023/12/05/vanBlog博客搭建过程/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月29日</div>
+          <div>2023年12月5日</div>
         </div>
       
       
@@ -347,15 +355,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%A0%B9%E6%8D%AE%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/" title="分页查询根据另一个表进行排序">
+                      <a href="/2023/12/05/Navicat%E5%AF%BC%E5%85%A5sql%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Navicat导入sql文件过大解决方案">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">分页查询根据另一个表进行排序</span>
+                        <span class="hidden-mobile">Navicat导入sql文件过大解决方案</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/12/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%A0%B9%E6%8D%AE%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/" title="分页查询根据另一个表进行排序">
+                        <span class="hidden-mobile">分页查询根据另一个表进行排序</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

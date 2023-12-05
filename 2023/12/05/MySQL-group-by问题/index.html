@@ -16,21 +16,24 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="某天，生产报错，故搜索原因。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/11/29/hello-world/index.html">
+<meta property="og:title" content="MySQL group_by问题">
+<meta property="og:url" content="http://example.com/2023/12/05/MySQL-group-by%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="某天，生产报错，故搜索原因。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-29T15:53:05.127Z">
-<meta property="article:modified_time" content="2023-11-29T15:53:05.127Z">
+<meta property="og:image" content="http://example.com/static/img/17886b52ba03a1a3bd91e40c5f55ac95.image.webp">
+<meta property="og:image" content="http://example.com/static/img/885b983bd84925dc818cae41a39afd5b.image.webp">
+<meta property="article:published_time" content="2023-12-05T13:53:58.000Z">
+<meta property="article:modified_time" content="2023-12-05T13:54:20.976Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/static/img/17886b52ba03a1a3bd91e40c5f55ac95.image.webp">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>MySQL group_by问题 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="MySQL group_by问题"></span>
           
         </div>
 
@@ -207,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-29 23:53" pubdate>
-          2023年11月29日 晚上
+        <time datetime="2023-12-05 21:53" pubdate>
+          2023年12月5日 晚上
         </time>
       </span>
     
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          1.7k 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          4 分钟
+          15 分钟
         
       </span>
     
@@ -267,24 +270,37 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">MySQL group_by问题</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>某天，生产报错，故搜索原因。</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="/static/img/17886b52ba03a1a3bd91e40c5f55ac95.image.webp" srcset="/img/loading.gif" lazyload alt="image.png"><br>得到数据库重启，原来的配置文件不生效了，即sql_mode标准化。</p>
+<p>ONLY_FULL_GROUP_BY官方说明：<br>Reject queries for which the select list, HAVING condition, or ORDER BY list refer to nonaggregated columns that are neither named in the GROUP BY clause nor are functionally dependent on (uniquely determined by) GROUP BY columns.</p>
+<p>拒绝选择列表、 HAVING条件或ORDER BY列表引用非聚合列的查询，这些列既不在GROUP BY子句中命名，也不在功能上依赖于（唯一确定的） GROUP BY列。（谷歌翻译）</p>
+<h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><p>假设你安装的是MySql 5.7以后的版本，比如5.7.21，默认情况下，sql_mode里的only_full_group_by是被打开的：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> version();<br><br><span class="hljs-keyword">select</span> @<span class="hljs-variable">@GLOBAL</span>.sql_mode;<br></code></pre></td></tr></table></figure>
+<p>因为是老项目，可能之前项目中的某些sql书写并不规范。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1-命令行更改数据库的sqlMode"><a href="#1-命令行更改数据库的sqlMode" class="headerlink" title="1.命令行更改数据库的sqlMode"></a>1.命令行更改数据库的sqlMode</h3><p>命令更改</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SET</span> @<span class="hljs-variable">@GLOBAL</span>.sql_mode <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&#x27;</span>;<br></code></pre></td></tr></table></figure>
+<p>注意事项：如果仍然报错，请打开新会话执行查询语句。</p>
+<p>还要值得注意的是，上面关闭only_full_group_by的方式是临时的，如果重启了MySql服务器，only_full_group_by又被打开了.</p>
+<h3 id="2-修改配置文件"><a href="#2-修改配置文件" class="headerlink" title="2.修改配置文件"></a>2.修改配置文件</h3><p>可以通过在&#x2F;etc&#x2F;my.cnf文件添加以下内容，来永久关闭only_full_group_by：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">sql_mode = <span class="hljs-string">&quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&quot;</span><br></code></pre></td></tr></table></figure>
+<p>修改完毕后，记得重启MySql。</p>
+<p>如果重启后也不会生效，检查下sql_mode的位置是不是不对（放在最后是不会生效的）：</p>
+<p><img src="/static/img/885b983bd84925dc818cae41a39afd5b.image.webp" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="3-重构问题代码"><a href="#3-重构问题代码" class="headerlink" title="3.重构问题代码"></a>3.重构问题代码</h3><ul>
+<li>将非聚合列添加到GROUP BY子句中：将SELECT语句中的非聚合列添加到GROUP BY子句中，以确保每个分组都包含这些列的唯一值。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> column1, column2, <span class="hljs-built_in">SUM</span>(column3)<br><span class="hljs-keyword">FROM</span> your_table<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column1, column2;<br></code></pre></td></tr></table></figure>
+遇到稍微复杂的查询参考<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span><br>  <span class="hljs-keyword">CASE</span><br>    <span class="hljs-keyword">WHEN</span> zd.order_type <span class="hljs-operator">=</span> <span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span> zp.supplier_id<br>    <span class="hljs-keyword">ELSE</span> msup.supplier_id<br>  <span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> supplierId,<br>  <span class="hljs-built_in">SUM</span>(sales_amount) <span class="hljs-keyword">AS</span> totalSales<br><span class="hljs-keyword">FROM</span><br>  your_table<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>  <span class="hljs-keyword">CASE</span><br>    <span class="hljs-keyword">WHEN</span> zd.order_type <span class="hljs-operator">=</span> <span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span> zp.supplier_id<br>    <span class="hljs-keyword">ELSE</span> msup.supplier_id<br>  <span class="hljs-keyword">END</span>;<br></code></pre></td></tr></table></figure></li>
+<li>使用聚合函数：将非聚合列作为聚合函数的参数，以便在每个分组中对它们进行聚合计算。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> column1, column2, <span class="hljs-built_in">MAX</span>(column3)<br><span class="hljs-keyword">FROM</span> your_table<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column1, column2;<br></code></pre></td></tr></table></figure>
+聚合函数包括SUM(),MIN(),MAX(),AVG(),COUNT(),GROUP_CONCAT</li>
+<li>使用ANY_VALUE函数：如果你确定在每个分组中非聚合列的值是相同的，可以使用ANY_VALUE函数来选择任意一个值。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> column1, column2, ANY_VALUE(column3)<br><span class="hljs-keyword">FROM</span> your_table<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column1, column2;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -302,8 +318,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/11/29/hello-world/</div>
+      <div>MySQL group_by问题</div>
+      <div>http://example.com/2023/12/05/MySQL-group-by问题/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +331,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月29日</div>
+          <div>2023年12月5日</div>
         </div>
       
       
@@ -347,15 +363,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/05/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2%E6%A0%B9%E6%8D%AE%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/" title="分页查询根据另一个表进行排序">
+                      <a href="/2023/12/05/Docker%E5%AE%89%E8%A3%85MySQL/" title="Docker安装MySQL">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">分页查询根据另一个表进行排序</span>
+                        <span class="hidden-mobile">Docker安装MySQL</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/12/05/Git-Commit%E8%A7%84%E8%8C%83/" title="Git Commit规范">
+                        <span class="hidden-mobile">Git Commit规范</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
